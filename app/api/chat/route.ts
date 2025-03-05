@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
   // Ask OpenAI for a streaming chat completion given the prompt
   const response = await openai.chat.completions.create({
-    model: 'ft:gpt-3.5-turbo-0613:personal:ai-poet:88GTGA7b',
+    model: 'ft:gpt-3.5-turbo-0125:personal:esg-model:B7oDztu9',
     stream: true,
     messages: [
       {
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
         // Note: This has to be the same system prompt as the one
         // used in the fine-tuning dataset
         content:
-          "You are a knowledgeable lawyer who knows all about compliance and regulations."
+          "ESG Bot"
       },
       ...messages
     ]
